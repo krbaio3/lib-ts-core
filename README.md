@@ -1,4 +1,4 @@
-# Lib Ts M50 Core
+# Library Core Typescript
 
 ## Installation
 
@@ -97,26 +97,6 @@ npm run dev
 ```
 
 Inicia el servidor de desarrollo de Vite.
-
-#### Docker Build
-```json
-"docker:build": "docker build -t lib-react-layout-components:0.1.0 ."
-```
-```bash
-npm run docker:build 
-```
-
-Construye una imagen Docker del proyecto con la etiqueta `lib-react-layout-components:0.1.0`.
-
-#### Docker Run
-```json
-"docker:run": "docker run -p 5555:80 lib-react-layout-components:0.1.0"
-```
-```bash
-npm run docker:run 
-```
-
-Ejecuta un contenedor Docker de la imagen construida, mapeando el puerto 5555 del host al puerto 80 del contenedor.
 
 #### Lint
 ```json
