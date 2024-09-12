@@ -14,7 +14,7 @@
 	},
 	"main": "dist/core.cjs.js",
 	"module": "dist/core.es.js",
-	"types": "dist/core.d.ts",
+	"types": "dist/types/core.d.ts",
 	"files": [
 		"dist",
 		"package.json",
@@ -35,8 +35,6 @@
 		"clean": "rimraf ./dist",
 		"commit": "cz",
 		"dev": "vite",
-		"docker:build": "docker build -t lib-react-layout-components:0.1.0 .",
-		"docker:run": "docker run -p 5555:80 lib-react-layout-components:0.1.0",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
 		"preview": "vite preview",
