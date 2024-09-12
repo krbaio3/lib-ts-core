@@ -20,10 +20,11 @@
 		"package.json",
 		"release.js",
 		"eslint.config.mjs",
-		"commitlint.config.cjs",
+		"commitlint.config.mjs",
 		".prettierrc.json",
 		".lintstagedrc.mjs",
-		".versionrc"
+		".versionrc",
+		".czrc"
 	],
 	"scripts": {
 		"build": "vite build && tsc && rollup -c rollup.config.mjs",
@@ -32,7 +33,7 @@
 		"check": "prettier . --check",
 		"check:fix": "prettier . --write",
 		"clean": "rimraf ./dist",
-		"commit": "git cz",
+		"commit": "commit",
 		"dev": "vite",
 		"docker:build": "docker build -t lib-react-layout-components:0.1.0 .",
 		"docker:run": "docker run -p 5555:80 lib-react-layout-components:0.1.0",
@@ -43,11 +44,13 @@
 		"release:major": "standard-version --release-as major",
 		"release:minor": "standard-version --release-as minor",
 		"release:patch": "standard-version --release-as patch",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"version": "npx conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "19.5.0",
 		"@commitlint/config-conventional": "19.5.0",
+		"@commitlint/prompt-cli": "19.5.0",
 		"@eslint/js": "10.0.0",
 		"@stylistic/eslint-plugin": "2.8.0",
 		"@types/eslint": "9.6.1",
@@ -58,7 +61,9 @@
 		"@typescript-eslint/eslint-plugin": "8.5.0",
 		"@typescript-eslint/parser": "8.5.0",
 		"animate.css": "4.1.1",
+		"commitizen": "4.3.0",
 		"conventional-changelog": "6.0.0",
+		"conventional-changelog-cli": "5.0.0",
 		"eslint": "9.10.0",
 		"eslint-config-prettier": "9.1.0",
 		"eslint-config-xo": "0.46.0",
@@ -96,6 +101,9 @@
 		"@typescript-eslint/eslint-plugin": "8.5.0",
 		"@typescript-eslint/parser": "8.5.0",
 		"animate.css": "4.1.1",
+		"commitizen": "4.3.0",
+		"conventional-changelog": "6.0.0",
+		"conventional-changelog-cli": "5.0.0",
 		"eslint": "9.10.0",
 		"eslint-config-prettier": "9.1.0",
 		"eslint-config-xo": "0.46.0",
