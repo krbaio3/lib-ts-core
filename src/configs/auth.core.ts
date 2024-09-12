@@ -12,7 +12,6 @@ export class AuthCore {
 		return AuthCore.instance;
 	}
 
-
 	private static instance: AuthCore | undefined = undefined;
 
 	public apiUrl: string;

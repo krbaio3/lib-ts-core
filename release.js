@@ -15,9 +15,7 @@ function handleError(message) {
 function getNextVersion(currentVersion, releaseType) {
 	const nextVersion = semver.inc(currentVersion, releaseType, 'rc');
 	if (!nextVersion) {
-		handleError(
-			`Invalid release type: ${releaseType}\nUsage: node release.js [major|minor|patch|prerelease]`,
-		);
+		handleError(`Invalid release type: ${releaseType}\nUsage: node release.js [major|minor|patch|prerelease]`);
 	}
 
 	return nextVersion;
