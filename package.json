@@ -33,7 +33,7 @@
 		"check": "prettier . --check",
 		"check:fix": "prettier . --write",
 		"clean": "rimraf ./dist",
-		"commit": "commit",
+		"commit": "cz",
 		"dev": "vite",
 		"docker:build": "docker build -t lib-react-layout-components:0.1.0 .",
 		"docker:run": "docker run -p 5555:80 lib-react-layout-components:0.1.0",
