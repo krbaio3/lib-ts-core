@@ -13,8 +13,7 @@ npm install my-ts-library
 ```typescript
 import { greet } from 'my-ts-library';
 
-
-console.log(greet('World'));  // Outputs: Hello, World!
+console.log(greet('World')); // Outputs: Hello, World!
 ```
 
 ## Ejecutar scripts
@@ -24,18 +23,21 @@ console.log(greet('World'));  // Outputs: Hello, World!
   npm run build
   ```
 - **Ejecutar las pruebas**:
+
 ```bash
 
 npm test
 ```
+
 - **Linter**:
+
 ```bash
 
 npm run lint
 ```
 
 ### Publicar la librería
-    
+
 ```bash
 npm publish
 ```
@@ -43,6 +45,7 @@ npm publish
 ### AuthCore
 
 #### Inicializar AuthCore desde el proyecto que consume la librería
+
 En el proyecto que consuma la librería, deberá de llamar a `AuthCore.initialize()` antes de utilizar el interceptor. Esto garantizará que la instancia esté configurada con los parámetros correctos.
 
 Por ejemplo, en el archivo principal del proyecto:
@@ -55,8 +58,8 @@ AuthCore.initialize('https://api.example.com', 'auth/token');
 
 // Luego puedes usar fetch como normalmente lo harías
 fetch('https://api.example.com/some-endpoint')
-.then(response => response.json())
-.then(data => console.log(data));
+	.then((response) => response.json())
+	.then((data) => console.log(data));
 ```
 
 #### Explicación
@@ -75,10 +78,10 @@ Primero, se define una enumeración `LogLevel` que especifica los diferentes niv
 
 ```typescript
 enum LogLevel {
- DEBUG = 'debug',
- INFO = 'info',
- WARN = 'warn',
- ERROR = 'error',
+	DEBUG = 'debug',
+	INFO = 'info',
+	WARN = 'warn',
+	ERROR = 'error',
 }
 ```
 
@@ -282,32 +285,32 @@ export function findKeyInObject(
 La función primero verifica si la profundidad actual excede la profundidad máxima permitida. Si es así, retorna `null`.
 
 ```typescript
- if (currentDepth > maxDepth) return null;
+if (currentDepth > maxDepth) return null;
 ```
 
 Luego, comprueba si el objeto contiene la clave buscada utilizando `hasOwnProperty`. Si la clave existe, devuelve su valor.
 
 ```typescript
- if (obj.hasOwnProperty(keyToFind)) return obj[keyToFind];
+if (obj.hasOwnProperty(keyToFind)) return obj[keyToFind];
 ```
 
 Si la clave no se encuentra en el nivel actual, la función itera sobre las propiedades del objeto. Si una propiedad es un objeto y no es `null`, la función llama a sí misma recursivamente incrementando la profundidad actual.
 
 ```typescript
- for (const key in obj) {
-  if (obj[key] !== null && typeof obj[key] === 'object') {
-   const result = findKeyInObject(obj[key], keyToFind, currentDepth + 1, maxDepth);
-   if (result !== null) {
-    return result;
-   }
-  }
- }
+for (const key in obj) {
+	if (obj[key] !== null && typeof obj[key] === 'object') {
+		const result = findKeyInObject(obj[key], keyToFind, currentDepth + 1, maxDepth);
+		if (result !== null) {
+			return result;
+		}
+	}
+}
 ```
 
 Finalmente, si la clave no se encuentra en ningún nivel dentro de la profundidad permitida, la función retorna `null`.
 
 ```typescript
- return null;
+return null;
 ```
 
 En resumen, `findKeyInObject` es una función recursiva que busca una clave específica dentro de un objeto y sus subobjetos hasta una profundidad máxima especificada, devolviendo el valor de la clave si se encuentra o `null` si no se encuentra.

@@ -25,7 +25,7 @@ export default [
 				tsconfigRootDir: __dirname,
 				sourceType: 'module',
 			},
-		 	globals: globals.browser
+			globals: globals.browser,
 		},
 		plugins: {
 			unicorn: eslintPluginUnicorn,
@@ -44,11 +44,11 @@ export default [
 			'new-cap': 'off',
 			'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 			'@typescript-eslint/parameter-properties': [
-					'error',
-					{
-						"allow": ["readonly"]
-					}
-				]
+				'error',
+				{
+					allow: ['readonly'],
+				},
+			],
 		},
 	},
 	{
@@ -71,5 +71,4 @@ export default [
 		},
 	},
 	{ ignores: ['**/build/**', '**/dist/**', 'node_modules/**', '*.mjs', '*.cjs'] },
-
 ];

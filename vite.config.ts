@@ -14,5 +14,5 @@ export default defineConfig({
 			external: [],
 		},
 		minify: false,
-	}
+	},
 });

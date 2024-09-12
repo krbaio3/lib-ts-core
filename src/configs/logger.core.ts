@@ -32,8 +32,6 @@ class Logger {
 		this.error = this.log.bind(this, LogLevel.ERROR);
 	}
 
-
-
 	private shouldLog(level: LogLevel): boolean {
 		const levels = [LogLevel.DEBUG, LogLevel.INFO, LogLevel.WARN, LogLevel.ERROR];
 		const currentLevelIndex = levels.indexOf(this.level);
@@ -76,7 +74,6 @@ class Logger {
 			case LogLevel.ERROR: {
 				return { color: 'white', backgroundColor: 'red' };
 			}
-
 		}
 	}
 }
