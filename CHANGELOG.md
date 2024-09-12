@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/krbaio3/lib-ts-core/compare/v0.2.2...v0.2.3) (2024-09-12)
+
+
+### Features
+
+* add new config in package.json ([e602327](https://github.com/krbaio3/lib-ts-core/commit/e602327969e14b57f9251ad5b1e05bcdc481fd55))
+
 ### [0.2.2](https://github.com/krbaio3/lib-ts-core/compare/v0.2.1...v0.2.2) (2024-09-12)
 
 
