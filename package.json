@@ -1,6 +1,6 @@
 {
 	"name": "@codespartan/lib-ts-core",
-	"version": "0.2.3",
+	"version": "0.3.3",
 	"description": "Librería que contiene las configuraciones básicas para proyectos de Typescript",
 	"keywords": [],
 	"license": "ISC",
@@ -9,12 +9,13 @@
 	"exports": {
 		".": {
 			"import": "./dist/core.es.js",
-			"require": "./dist/core.cjs.js"
+			"require": "./dist/core.cjs.js",
+			"types": "./dist/types/core.d.ts"
 		}
 	},
 	"main": "dist/core.cjs.js",
 	"module": "dist/core.es.js",
-	"types": "dist/core.d.ts",
+	"types": "dist/types/core.d.ts",
 	"files": [
 		"dist",
 		"package.json",
@@ -24,19 +25,19 @@
 		".prettierrc.json",
 		".lintstagedrc.mjs",
 		".versionrc",
-		".czrc"
+		".czrc",
+		"CHANGELOG.md",
+		"README.md"
 	],
 	"scripts": {
-		"build": "vite build && tsc && rollup -c rollup.config.mjs",
+		"build": "tsc && vite build && rollup -c rollup.config.mjs",
 		"buildAndChangelog": "npm run build && npm run changelog",
-		"changelog": "npx conventional-changelog -p angular -i ./CHANGELOG.md -s -r 0",
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
 		"check": "prettier . --check",
 		"check:fix": "prettier . --write",
 		"clean": "rimraf ./dist",
 		"commit": "cz",
 		"dev": "vite",
-		"docker:build": "docker build -t lib-react-layout-components:0.1.0 .",
-		"docker:run": "docker run -p 5555:80 lib-react-layout-components:0.1.0",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
 		"preview": "vite preview",
@@ -44,9 +45,7 @@
 		"release:major": "standard-version --release-as major",
 		"release:minor": "standard-version --release-as minor",
 		"release:patch": "standard-version --release-as patch",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"version": "npx conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
-		"prepublish": "npm pack"
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "19.5.0",
