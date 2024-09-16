@@ -13,171 +13,197 @@ npm install @codespartan/lib-ts-core
 El archivo `package.json` contiene una serie de scripts que automatizan tareas comunes en el desarrollo del proyecto. A continuación, se explica cada uno de estos scripts:
 
 #### Build
+
 ```json
 "build": "vite build && tsc && rollup -c rollup.config.mjs"
 ```
 
 ```bash
-npm run build 
+npm run build
 ```
+
 Este script compila el proyecto utilizando Vite, TypeScript y Rollup. Primero, `vite build` se encarga de la construcción inicial, `tsc` compila los archivos TypeScript, y finalmente `rollup -c rollup.config.mjs` empaqueta los módulos según la configuración de Rollup.
 
 #### Build and Changelog
+
 ```json
 "buildAndChangelog": "npm run build && npm run changelog"
 ```
 
 ```bash
-npm run buildAndChangelog 
+npm run buildAndChangelog
 ```
 
 Este script ejecuta el script de construcción (`build`) y luego genera un changelog utilizando `conventional-changelog`.
 
 #### Changelog
+
 ```json
 "changelog": "npx conventional-changelog -p angular -i ./CHANGELOG.md -s -r 0"
 ```
 
 ```bash
-npm run changelog 
+npm run changelog
 ```
 
 Genera un changelog basado en los commits del proyecto siguiendo el formato Angular. El changelog se guarda en el archivo `CHANGELOG.md`.
 
 #### Check
+
 ```json
 "check": "prettier . --check"
 ```
 
 ```bash
-npm run check 
+npm run check
 ```
 
 Verifica que el código esté formateado correctamente según las reglas de Prettier.
 
 #### Check Fix
+
 ```json
 "check:fix": "prettier . --write"
 ```
 
 ```bash
-npm run check:fix 
+npm run check:fix
 ```
 
 Formatea automáticamente el código según las reglas de Prettier.
 
 #### Clean
+
 ```json
 "clean": "rimraf ./dist"
 ```
 
 ```bash
-npm run clean 
+npm run clean
 ```
 
 Elimina el directorio `dist` para limpiar los archivos generados en la construcción anterior.
 
 #### Commit
+
 ```json
 "commit": "cz"
 ```
+
 ```bash
-npm run commit 
+npm run commit
 ```
 
 Inicia el asistente de Commitizen para ayudar a crear mensajes de commit estandarizados.
 
 #### Dev
+
 ```json
 "dev": "vite"
 ```
 
 ```bash
-npm run dev 
+npm run dev
 ```
 
 Inicia el servidor de desarrollo de Vite.
 
 #### Lint
+
 ```json
 "lint": "eslint ."
 ```
+
 ```bash
-npm run lint 
+npm run lint
 ```
 
 Ejecuta ESLint para verificar que el código cumpla con las reglas de estilo y calidad definidas.
 
 #### Lint Fix
+
 ```json
 "lint:fix": "eslint . --fix"
 ```
+
 ```bash
-npm run lint:fix 
+npm run lint:fix
 ```
 
 Corrige automáticamente los problemas de estilo y calidad detectados por ESLint.
 
 #### Preview
+
 ```json
 "preview": "vite preview"
 ```
+
 ```bash
-npm run preview 
+npm run preview
 ```
 
 Inicia un servidor para previsualizar la aplicación construida.
 
 #### Release
+
 ```json
 "release": "standard-version"
 ```
+
 ```bash
-npm run release 
+npm run release
 ```
 
 Genera una nueva versión del proyecto siguiendo el estándar de `standard-version`.
 
 #### Release Major, Minor, Patch
+
 ```json
 "release:major": "standard-version --release-as major",
 "release:minor": "standard-version --release-as minor",
 "release:patch": "standard-version --release-as patch"
 ```
+
 ```bash
-npm run release:major 
-npm run release:minor 
-npm run release:patch 
+npm run release:major
+npm run release:minor
+npm run release:patch
 ```
 
 Genera una nueva versión mayor, menor o de parche del proyecto, respectivamente.
 
 #### Test
+
 ```json
 "test": "echo \"Error: no test specified\" && exit 1"
 ```
+
 ```bash
-npm run test 
+npm run test
 ```
 
 Placeholder para los tests del proyecto. Actualmente, este script muestra un mensaje de error y termina con un código de salida 1.
 
 #### Version
+
 ```json
 "version": "npx conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
 ```
+
 ```bash
-npm run version 
+npm run version
 ```
 
 Genera un changelog y lo añade al control de versiones.
 
 #### Prepublish
+
 ```json
 "prepublish": "npm pack"
 ```
+
 ```bash
-npm run prepublish 
+npm run prepublish
 ```
 
 Empaqueta el proyecto en un archivo tarball listo para ser publicado.

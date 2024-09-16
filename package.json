@@ -25,10 +25,11 @@
 		".prettierrc.json",
 		".lintstagedrc.mjs",
 		".versionrc",
-		".czrc"
+		".czrc",
+		"CHANGELOG.md"
 	],
 	"scripts": {
-		"build": "vite build && tsc && rollup -c rollup.config.mjs",
+		"build": "tsc && vite build && rollup -c rollup.config.mjs",
 		"buildAndChangelog": "npm run build && npm run changelog",
 		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
 		"check": "prettier . --check",
