@@ -2,13 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.3.1](https://github.com/krbaio3/lib-ts-core/compare/v0.3.0...v0.3.1) (2024-09-16)
+### [0.3.2](https://github.com/krbaio3/lib-ts-core/compare/v0.3.1...v0.3.2) (2024-09-16)
+
+## [0.3.1](https://github.com/krbaio3/lib-ts-core/compare/v0.3.0...v0.3.1) (2024-09-16)
 
 
 ### Bug Fixes
 
 * export types ([8af7698](https://github.com/krbaio3/lib-ts-core/commit/8af769859341edd21393f8406da6f3a54e8f1feb))
 * export types ([4ff5c0c](https://github.com/krbaio3/lib-ts-core/commit/4ff5c0c180cc83a6694d5dbee9f6a3243bef680c))
+
+
 
 # [0.3.0](https://github.com/krbaio3/lib-ts-core/compare/v0.2.3...v0.3.0) (2024-09-12)
 
