@@ -1,0 +1,52 @@
+{
+	"name": "@codespartan/eslint-config",
+	"version": "0.1.0",
+	"description": "Configuracion para ESlint compartida para proyectos",
+	"main": "eslint.config.mjs",
+	"type": "module",
+	"keywords": [
+		"eslint",
+		"config"
+	],
+	"author": {
+		"name": "John Krbaio",
+		"email": "krbaio3@gmail.com"
+	},
+	"scripts": {
+		"buildAndChangelog": "npm run changelog",
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+	},
+	"peerDependencies": {
+		"@eslint/js": "^9.x.x",
+		"@stylistic/eslint-plugin": "^2.x.x",
+		"@types/eslint": "^9.x.x",
+		"@types/eslint-config-prettier": "^6.x.x",
+		"@types/eslint__js": "^8.x.x",
+		"@types/node": "^22.x.x",
+		"eslint": "^9.x.x",
+		"eslint-config-prettier": "^9.x.x",
+		"eslint-config-xo": "^0.x.x",
+		"eslint-config-xo-typescript": "^6.x.x",
+		"eslint-plugin-jest": "^28.x.x",
+		"eslint-plugin-prettier": "^5.x.x",
+		"eslint-plugin-unicorn": "^55.x.x",
+		"globals": "^15.x.x",
+		"prettier": "^3.x.x",
+		"typescript": "^5.x.x",
+		"typescript-eslint": "^8.x.x",
+		"xo": "^0.x.x"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://opensource.org/licenses/MIT"
+		}
+	],
+	"devDependencies": {
+		"@eslint/js": "9.10.0",
+		"@types/eslint__js": "8.42.3",
+		"eslint": "^9.10.0",
+		"typescript": "^5.6.2",
+		"typescript-eslint": "^8.6.0"
+	}
+}
