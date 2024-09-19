@@ -15,13 +15,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default [
 	pluginJs.configs.recommended,
 	...tsEslint.configs.recommended,
+	...eslintConfigXOTypescript,
 	{
-		files: ['src/**/*.ts', 'src/**/*.tsx'],
+		files: ['src/**/*.ts'],
 		languageOptions: {
 			parser: typescriptEslintParser,
 			ecmaVersion: 'latest',
 			parserOptions: {
-				project: './tsconfig.json',
+				project: path.resolve(__dirname, './tsconfig.json'),
 				tsconfigRootDir: __dirname,
 				sourceType: 'module',
 			},
@@ -33,7 +34,6 @@ export default [
 		},
 		rules: {
 			...eslintConfigXO.rules,
-			...eslintConfigXOTypescript.rules,
 			...eslintPluginUnicorn.configs['flat/all'].rules,
 			...eslintConfigPrettier.rules,
 			'@typescript-eslint/no-unsafe-call': 'off',
