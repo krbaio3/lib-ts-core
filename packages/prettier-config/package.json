@@ -1,0 +1,33 @@
+{
+	"name": "@codespatan/prettier-config",
+	"version": "0.1.0",
+	"description": "Configuracion para Prettier compartida para proyectos",
+	"main": ".prettierrc.js",
+	"type": "module",
+	"keywords": [
+		"prettier",
+		"config"
+	],
+	"files": [
+		".prettierrc.js",
+		".prettierignore",
+		"CHANGELOG.md",
+		"LICENSE",
+		"package.json",
+		"readme.md"
+	],
+	"author": {
+		"name": "John Krbaio",
+		"email": "krbaio3@gmail.com"
+	},
+	"scripts": {
+		"buildAndChangelog": "npm run changelog",
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://opensource.org/licenses/MIT"
+		}
+	]
+}
