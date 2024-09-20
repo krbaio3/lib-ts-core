@@ -23,12 +23,15 @@
 	"scripts": {
 		"buildAndChangelog": "npm run changelog",
 		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-		"sort": "npx sort-package-json",
 		"release": "standard-version --config @codespartan/standard-version-config/.versionrc",
 		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
 		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
 		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
-		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major"
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
+		"sort": "npx sort-package-json"
+	},
+	"devDependencies": {
+		"@codespartan/standard-version-config": "workspace:*"
 	},
 	"peerDependencies": {
 		"@commitlint/cli": "^19.x.x",
@@ -44,5 +47,11 @@
 			"type": "MIT",
 			"url": "https://opensource.org/licenses/MIT"
 		}
-	]
+	],
+	"standard-version": {
+		"skip": {
+			"commit": true,
+			"tag": true
+		}
+	}
 }

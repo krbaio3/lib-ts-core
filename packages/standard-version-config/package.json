@@ -1,6 +1,6 @@
 {
 	"name": "@codespartan/standard-version-config",
-	"version": "0.1.0",
+	"version": "0.5.0",
 	"description": "Configuracion para StandardVersion compartida para proyectos",
 	"keywords": [
 		"standard-version",
@@ -11,9 +11,9 @@
 		"email": "krbaio3@gmail.com"
 	},
 	"type": "module",
-	"main": ".versionrc.js",
+	"main": ".versionrc.cjs",
 	"files": [
-		".versionrc.js",
+		".versionrc.cjs",
 		"CHANGELOG.md",
 		"LICENSE",
 		"package.json",
@@ -22,12 +22,12 @@
 	"scripts": {
 		"buildAndChangelog": "npm run changelog",
 		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-		"sort": "npx sort-package-json",
 		"release": "standard-version --config @codespartan/standard-version-config/.versionrc",
 		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
 		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
 		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
-		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --prerelease"
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
+		"sort": "npx sort-package-json"
 	},
 	"dependencies": {
 		"conventional-changelog-cli": "^5.0.0",
@@ -41,5 +41,11 @@
 			"type": "MIT",
 			"url": "https://opensource.org/licenses/MIT"
 		}
-	]
+	],
+	"standard-version": {
+		"skip": {
+			"commit": true,
+			"tag": true
+		}
+	}
 }

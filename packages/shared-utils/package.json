@@ -21,7 +21,7 @@
 		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
 		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
 		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
-		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --prerelease"
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major"
 	},
 	"devDependencies": {
 		"@codespartan/eslint-config": "workspace:*",
@@ -55,5 +55,11 @@
 		"CHANGELOG.md",
 		"readme.md",
 		"LICENSE"
-	]
+	],
+	"standard-version": {
+		"skip": {
+			"commit": true,
+			"tag": true
+		}
+	}
 }

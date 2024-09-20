@@ -14,11 +14,11 @@ yarn add @codespartan/standard-version-config --dev
 
 ## Uso
 
-Para usar la configuración compartida de Standard Version, crea o actualiza tu archivo `.versionrc.js` en la raíz de tu proyecto con el siguiente contenido:
+Para usar la configuración compartida de Standard Version, crea o actualiza tu archivo `.versionrc.cjs` en la raíz de tu proyecto con el siguiente contenido:
 
 ```js
 module.exports = {
-  ...require('@codespartan/standard-version-config')
+	...require('@codespartan/standard-version-config/.versionrc')
 };
 ```
 

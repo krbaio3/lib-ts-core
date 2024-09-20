@@ -1,6 +1,6 @@
 {
 	"name": "@codespartan/lib-ts-core",
-	"version": "0.3.4",
+	"version": "1.0.0",
 	"private": true,
 	"description": "Librería que contiene las configuraciones básicas para proyectos de Typescript",
 	"keywords": [],
@@ -27,8 +27,8 @@
 		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
 		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
 		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
-		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --prerelease",
-		"release:all": "pnpm -r run release",
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
+		"release:all": "pnpm -r run release:prerelease",
 		"sort": "npx sort-package-json",
 		"sorter": "pnpm -r run sort"
 	},
