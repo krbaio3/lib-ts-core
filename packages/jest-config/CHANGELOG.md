@@ -1,3 +1,22 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [0.2.0-0](https://github.com/krbaio3/lib-ts-core/compare/v0.3.4...v0.2.0-0) (2024-09-20)
+
+## 0.2.0-0 (2024-09-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* Change all config and inport/export
+* Change all config and inport/export
+
+### Features
+
+* new config with monorepo ([e4cd60c](https://github.com/krbaio3/lib-ts-core/commit/e4cd60c6be30d107ecbdd555e87076c513ca0641))
+* new config with monorepo ([4fdeba5](https://github.com/krbaio3/lib-ts-core/commit/4fdeba5503d7e0b9fed2b50fdd7a8c24f0b07314))
+
 ## 0.1.0 (2024-09-20)
 
 * feat: new config with monorepo ([4fdeba5](https://github.com/krbaio3/lib-ts-core/commit/4fdeba5))
@@ -64,6 +83,3 @@
 * feat: add standard version dependencie ([898f749](https://github.com/krbaio3/lib-ts-core/commit/898f749))
 * Initial commit ([c226cd3](https://github.com/krbaio3/lib-ts-core/commit/c226cd3))
 * Initial commit ([de58078](https://github.com/krbaio3/lib-ts-core/commit/de58078))
-
-
-
