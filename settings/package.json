@@ -1,6 +1,6 @@
 {
-	"name": "@codespartan/lib-ts-core",
-	"version": "0.3.4",
+	"name": "@codespartan/settings-config",
+	"version": "0.1.0",
 	"private": true,
 	"description": "Librería que contiene las configuraciones básicas para proyectos de Typescript",
 	"keywords": [],
@@ -10,13 +10,23 @@
 		"email": "jcarballo@bankinter.com"
 	},
 	"type": "module",
+	"exports": {
+		".": {
+			"import": "./dist/core.es.js",
+			"require": "./dist/core.cjs.js",
+			"types": "./dist/types/core.d.ts"
+		}
+	},
+	"main": "dist/core.cjs.js",
+	"module": "dist/core.es.js",
+	"types": "dist/types/core.d.ts",
 	"files": [
 		"dist",
 		"package.json",
-		"release.js",
+		"release.mjs",
 		"eslint.config.mjs",
 		"commitlint.config.mjs",
-		".prettierrc.js",
+		".prettierrc.json",
 		".lintstagedrc.mjs",
 		"packages/standard-version-config/.versionrc.js",
 		".czrc",
@@ -24,25 +34,20 @@
 		"README.md"
 	],
 	"scripts": {
-		"build": "pnpm -r run buildAndChangelog",
-		"build:dev": "pnpm -r run build",
-		"check": "prettier --check .",
-		"check:fix": "prettier --write .",
+		"build": "pnpm -r run build",
+		"buildAndChangelog": "pnpm run build && pnpm run changelog",
+		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+		"check": "pnpm prettier-config check",
+		"check:fix": "pnpm prettier-config write",
 		"clean": "rimraf ./dist",
 		"commit": "cz",
-		"lint": "eslint .",
-		"lint:fix": "eslint . --fix",
-		"release": "standard-version --config @codespartan/standard-version-config/.versionrc",
-		"release:major": "pnpm standard-version-config --release-as major",
-		"release:minor": "pnpm standard-version-config --release-as minor",
-		"release:patch": "pnpm standard-version-config --release-as patch"
-	},
-	"dependencies": {
-		"@codespartan/eslint-config": "workspace:*",
-		"@codespatan/prettier-config": "workspace:*",
-		"@codespartan/standard-version-config": "workspace:*",
-		"@codespatan/commitlint-config": "workspace:*",
-		"@codespartan/typescript-config": "workspace:*"
+		"dev": "pnpm -r run dev",
+		"lint": "pnpm eslint-config lint",
+		"lint:fix": "pnpm eslint-config lint:fix",
+		"release": "standard-version",
+		"release:major": "standard-version --release-as major",
+		"release:minor": "standard-version --release-as minor",
+		"release:patch": "standard-version --release-as patch"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^19.5.0",
@@ -64,12 +69,16 @@
 		"prettier": "^3.3.3",
 		"rimraf": "^6.0.1",
 		"standard-version": "^9.5.0",
-		"typescript": "^5.6.2"
+		"typescript": "^5.6.2",
+		"vite": "^5.4.4",
+		"vite-plugin-string": "^1.2.3"
 	},
+	"workspaces": [
+		"packages/*"
+	],
 	"engines": {
 		"node": ">=18.0.0",
 		"npm": ">=9.0.0",
-		"yarn": ">=1.2.0",
-		"pnpm": ">=7.0.0"
+		"yarn": ">=1.2.0"
 	}
 }

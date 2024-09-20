@@ -1,0 +1,32 @@
+{
+	"name": "@codespatan/commitlint-config",
+	"version": "0.1.0",
+	"description": "Configuracion para Commitlint compartida para proyectos",
+	"main": "commitlint.config.js",
+	"keywords": [
+		"commitlint",
+		"config"
+	],
+	"type": "module",
+	"author": {
+		"name": "John Krbaio",
+		"email": "krbaio3@gmail.com"
+	},
+	"scripts": {
+		"buildAndChangelog": "npm run changelog",
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+	},
+	"license": "MIT",
+	"peerDependencies": {
+		"@commitlint/cli": "^19.x.x",
+		"@commitlint/config-conventional": "^19.x.x",
+		"@commitlint/prompt-cli": "^19.x.x",
+		"commitizen": "^4.x.x"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://opensource.org/licenses/MIT"
+		}
+	]
+}

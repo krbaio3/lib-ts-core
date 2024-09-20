@@ -1,0 +1,29 @@
+{
+	"name": "@codespartan/standard-version-config",
+	"version": "0.1.0",
+	"description": "Configuracion para StandardVersion compartida para proyectos",
+	"main": ".versionrc.js",
+	"type": "module",
+	"keywords": [
+		"standard-version",
+		"config"
+	],
+	"author": {
+		"name": "John Krbaio",
+		"email": "krbaio3@gmail.com"
+	},
+	"scripts": {
+		"buildAndChangelog": "npm run changelog",
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+	},
+	"dependencies": {
+		"standard-version": "^9.5.0",
+		"conventional-changelog-cli": "^5.0.0"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://opensource.org/licenses/MIT"
+		}
+	]
+}

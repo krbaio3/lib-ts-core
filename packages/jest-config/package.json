@@ -1,0 +1,32 @@
+{
+	"name": "@codespartan/jest-config",
+	"version": "0.1.0",
+	"description": "Configuracion para Jest compartida para proyectos",
+	"main": "jest.config.js",
+	"type": "module",
+	"keywords": [
+		"jest",
+		"config"
+	],
+	"author": {
+		"name": "John Krbaio",
+		"email": "krbaio3@gmail.com"
+	},
+	"scripts": {
+		"buildAndChangelog": "npm run changelog",
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+	},
+	"peerDependencies": {
+		"@types/jest": "^29.x.x",
+		"@types/node": "^22.x.x",
+		"jest": "^29.x.x",
+		"ts-jest": "^29.x.x",
+		"typescript": "^5.x.x"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://opensource.org/licenses/MIT"
+		}
+	]
+}

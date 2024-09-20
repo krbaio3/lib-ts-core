@@ -1,0 +1,11 @@
+{
+	"extends": "@codespartan/typescript-config",
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./temp", // Directorio de salida local
+		"declarationDir": "./temp", // Directorio para los archivos de declaración
+		"composite": false // Asegurarse de que no sea parte de un proyecto composite si no lo necesitas
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "dist", "temp"]
+}
