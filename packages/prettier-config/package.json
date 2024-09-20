@@ -1,6 +1,6 @@
 {
 	"name": "@codespatan/prettier-config",
-	"version": "0.1.0",
+	"version": "0.2.0-0",
 	"description": "Configuracion para Prettier compartida para proyectos",
 	"keywords": [
 		"prettier",
