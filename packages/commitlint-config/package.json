@@ -1,6 +1,6 @@
 {
 	"name": "@codespatan/commitlint-config",
-	"version": "0.2.0-0",
+	"version": "1.0.0",
 	"description": "Configuracion para Commitlint compartida para proyectos",
 	"keywords": [
 		"commitlint",
@@ -28,7 +28,7 @@
 		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
 		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
 		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
-		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --prerelease"
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major"
 	},
 	"peerDependencies": {
 		"@commitlint/cli": "^19.x.x",
