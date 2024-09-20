@@ -8,6 +8,13 @@
 		"standard-version",
 		"config"
 	],
+	"files": [
+		".versionrc.js",
+		"CHANGELOG.md",
+		"LICENSE",
+		"package.json",
+		"readme.md"
+	],
 	"author": {
 		"name": "John Krbaio",
 		"email": "krbaio3@gmail.com"

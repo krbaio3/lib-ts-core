@@ -21,33 +21,17 @@
 	"module": "dist/core.es.js",
 	"types": "dist/types/core.d.ts",
 	"files": [
-		"dist",
 		"package.json",
 		"release.mjs",
-		"eslint.config.mjs",
-		"commitlint.config.mjs",
-		".prettierrc.json",
 		".lintstagedrc.mjs",
-		"packages/standard-version-config/.versionrc.js",
 		".czrc",
 		"CHANGELOG.md",
-		"README.md"
+		"readme.md",
+		".husky/"
 	],
 	"scripts": {
-		"build": "pnpm -r run build",
-		"buildAndChangelog": "pnpm run build && pnpm run changelog",
-		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-		"check": "pnpm prettier-config check",
-		"check:fix": "pnpm prettier-config write",
-		"clean": "rimraf ./dist",
-		"commit": "cz",
-		"dev": "pnpm -r run dev",
-		"lint": "pnpm eslint-config lint",
-		"lint:fix": "pnpm eslint-config lint:fix",
-		"release": "standard-version",
-		"release:major": "standard-version --release-as major",
-		"release:minor": "standard-version --release-as minor",
-		"release:patch": "standard-version --release-as patch"
+		"buildAndChangelog": "npm run changelog",
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^19.5.0",

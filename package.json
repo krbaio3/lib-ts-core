@@ -5,26 +5,11 @@
 	"description": "Librería que contiene las configuraciones básicas para proyectos de Typescript",
 	"keywords": [],
 	"license": "ISC",
-	"author": {
-		"name": "Jorge Carballo",
-		"email": "jcarballo@bankinter.com"
-	},
+	"author": "Jorge Carballo <jcarballo@bankinter.com>",
 	"type": "module",
-	"files": [
-		"dist",
-		"package.json",
-		"release.js",
-		"eslint.config.mjs",
-		"commitlint.config.mjs",
-		".prettierrc.js",
-		".lintstagedrc.mjs",
-		"packages/standard-version-config/.versionrc.js",
-		".czrc",
-		"CHANGELOG.md",
-		"README.md"
-	],
+	"files": [],
 	"scripts": {
-		"build": "pnpm -r run buildAndChangelog",
+		"build": "pnpm --workspace-concurrency=1 -r run buildAndChangelog",
 		"build:dev": "pnpm -r run build",
 		"check": "prettier --check .",
 		"check:fix": "prettier --write .",
@@ -39,10 +24,10 @@
 	},
 	"dependencies": {
 		"@codespartan/eslint-config": "workspace:*",
-		"@codespatan/prettier-config": "workspace:*",
 		"@codespartan/standard-version-config": "workspace:*",
+		"@codespartan/typescript-config": "workspace:*",
 		"@codespatan/commitlint-config": "workspace:*",
-		"@codespartan/typescript-config": "workspace:*"
+		"@codespatan/prettier-config": "workspace:*"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^19.5.0",
@@ -71,5 +56,9 @@
 		"npm": ">=9.0.0",
 		"yarn": ">=1.2.0",
 		"pnpm": ">=7.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:krbaio3/lib-ts-core.git"
 	}
 }

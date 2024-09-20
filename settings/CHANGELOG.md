@@ -1,6 +1,6 @@
-## 0.1.0 (2024-09-20)
+## 0.1.0 (2024-09-19)
 
-* feat: new config with monorepo ([4fdeba5](https://github.com/krbaio3/lib-ts-core/commit/4fdeba5))
+* feat: new config with monorepo ([9e81376](https://github.com/krbaio3/lib-ts-core/commit/9e81376))
 
 
 ### BREAKING CHANGE

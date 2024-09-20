@@ -8,6 +8,13 @@
 		"eslint",
 		"config"
 	],
+	"files": [
+		"eslint.config.mjs",
+		"CHANGELOG.md",
+		"LICENSE",
+		"package.json",
+		"readme.md"
+	],
 	"author": {
 		"name": "John Krbaio",
 		"email": "krbaio3@gmail.com"

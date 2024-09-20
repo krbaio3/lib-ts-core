@@ -7,6 +7,13 @@
 		"typescript",
 		"config"
 	],
+	"files": [
+		"typescript.json",
+		"CHANGELOG.md",
+		"LICENSE",
+		"package.json",
+		"readme.md"
+	],
 	"scripts": {
 		"buildAndChangelog": "npm run changelog",
 		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"

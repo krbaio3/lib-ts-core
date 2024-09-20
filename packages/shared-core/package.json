@@ -46,6 +46,7 @@
 		"dist",
 		"package.json",
 		"CHANGELOG.md",
-		"README.md"
+		"readme.md",
+		"LICENSE"
 	]
 }

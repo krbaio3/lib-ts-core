@@ -7,6 +7,13 @@
 		"commitlint",
 		"config"
 	],
+	"files": [
+		"commitlint.config.js",
+		"CHANGELOG.md",
+		"LICENSE",
+		"package.json",
+		"readme.md"
+	],
 	"type": "module",
 	"author": {
 		"name": "John Krbaio",
