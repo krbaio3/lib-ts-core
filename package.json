@@ -1,6 +1,6 @@
 {
 	"name": "@codespartan/lib-ts-core",
-	"version": "0.3.4",
+	"version": "1.0.0",
 	"private": true,
 	"description": "Librería que contiene las configuraciones básicas para proyectos de Typescript",
 	"keywords": [],
@@ -10,6 +10,8 @@
 	"files": [],
 	"scripts": {
 		"build": "pnpm --workspace-concurrency=1 -r run buildAndChangelog",
+		"buildAndChangelog": "npm run changelog",
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
 		"build:dev": "pnpm -r run build",
 		"check": "prettier --check .",
 		"check:fix": "prettier --write .",
@@ -18,9 +20,9 @@
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
 		"release": "standard-version --config @codespartan/standard-version-config/.versionrc",
-		"release:major": "pnpm standard-version-config --release-as major",
-		"release:minor": "pnpm standard-version-config --release-as minor",
-		"release:patch": "pnpm standard-version-config --release-as patch"
+		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
+		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
+		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch"
 	},
 	"dependencies": {
 		"@codespartan/eslint-config": "workspace:*",
@@ -60,5 +62,8 @@
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:krbaio3/lib-ts-core.git"
+	},
+	"publishConfig": {
+		"registry": "http://localhost:4873/"
 	}
 }
