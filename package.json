@@ -1,18 +1,22 @@
 {
 	"name": "@codespartan/lib-ts-core",
-	"version": "1.0.0",
+	"version": "0.3.4",
 	"private": true,
 	"description": "Librería que contiene las configuraciones básicas para proyectos de Typescript",
 	"keywords": [],
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:krbaio3/lib-ts-core.git"
+	},
 	"license": "ISC",
 	"author": "Jorge Carballo <jcarballo@bankinter.com>",
 	"type": "module",
 	"files": [],
 	"scripts": {
 		"build": "pnpm --workspace-concurrency=1 -r run buildAndChangelog",
+		"build:dev": "pnpm -r run build",
 		"buildAndChangelog": "npm run changelog",
 		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-		"build:dev": "pnpm -r run build",
 		"check": "prettier --check .",
 		"check:fix": "prettier --write .",
 		"clean": "rimraf ./dist",
@@ -22,7 +26,11 @@
 		"release": "standard-version --config @codespartan/standard-version-config/.versionrc",
 		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
 		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
-		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch"
+		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --prerelease",
+		"release:all": "pnpm -r run release",
+		"sort": "npx sort-package-json",
+		"sorter": "pnpm -r run sort"
 	},
 	"dependencies": {
 		"@codespartan/eslint-config": "workspace:*",
@@ -50,18 +58,15 @@
 		"lint-staged": "^15.2.10",
 		"prettier": "^3.3.3",
 		"rimraf": "^6.0.1",
+		"sort-package-json": "2.10.1",
 		"standard-version": "^9.5.0",
 		"typescript": "^5.6.2"
 	},
 	"engines": {
 		"node": ">=18.0.0",
 		"npm": ">=9.0.0",
-		"yarn": ">=1.2.0",
-		"pnpm": ">=7.0.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:krbaio3/lib-ts-core.git"
+		"pnpm": ">=7.0.0",
+		"yarn": ">=1.2.0"
 	},
 	"publishConfig": {
 		"registry": "http://localhost:4873/"

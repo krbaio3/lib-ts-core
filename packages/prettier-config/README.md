@@ -80,7 +80,7 @@ Si necesitas personalizar la configuración de Prettier para un proyecto especí
 ```js
 const baseConfig = require('@codespatan/prettier-config/.prettierrc');
 
-module.exports = {
+export default {
 	...baseConfig,
 	// Añade tus reglas personalizadas aquí
 	semi: false,

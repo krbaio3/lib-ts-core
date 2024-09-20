@@ -11,6 +11,11 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import eslint from '@eslint/js';
 import typescriptEslint from 'typescript-eslint';
 
+/**
+ * Genera la configuración básica de ESLint para TypeScript.
+ * @param {string} dirname - El directorio raíz del proyecto.
+ * @returns Eslint.Config La configuración de ESLint para TypeScript.
+ */
 export const basicEslintConfigTs = (dirname) => [
 	{
 		files: ['src/**/*.ts'], // Apunta a los archivos TypeScript
@@ -52,6 +57,10 @@ export const basicEslintConfigTs = (dirname) => [
 	},
 ];
 
+/**
+ * Configuración básica de ESLint para JavaScript.
+ * @type Eslint.Config
+ */
 export const basicEslintConfigJs = [
 	{
 		files: ['**/*.js'],
@@ -73,6 +82,10 @@ export const basicEslintConfigJs = [
 	},
 ];
 
+/**
+ * Configuración básica de ESLint.
+ * @type Eslint.Config
+ */
 export const basicEslintConfig = [
 	// Configuración de ESLint predeterminada
 	eslint.configs.recommended,
@@ -81,15 +94,3 @@ export const basicEslintConfig = [
 	// Configuración XO para TypeScript
 	...eslintConfigXOTypescript,
 ];
-
-const basicConfig = (dirname) => {
-	const bEslintConfigTs = basicEslintConfigTs(dirname);
-	return [
-		...basicEslintConfig,
-		...bEslintConfigTs,
-		...basicEslintConfigJs,
-		{ ignores: ['**/build/**', '**/dist/**', 'node_modules/**', '*.mjs', '*.cjs'] },
-	];
-};
-
-export default basicConfig;

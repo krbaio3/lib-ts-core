@@ -2,7 +2,6 @@
 	"name": "@codespartan/lib-ts-core",
 	"version": "0.1.0",
 	"description": "Librería que contiene las configuraciones básicas para proyectos de Typescript",
-	"type": "module",
 	"keywords": [
 		"typescript",
 		"core"
@@ -11,27 +10,7 @@
 		"name": "John Krbaio",
 		"email": "krbaio3@gmail.com"
 	},
-	"scripts": {
-		"build": "tsc && vite build && rollup -c rollup.config.mjs",
-		"buildAndChangelog": "npm run build && npm run changelog",
-		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
-	},
-	"devDependencies": {
-		"@codespartan/eslint-config": "workspace:*",
-		"@codespatan/prettier-config": "workspace:*",
-		"@codespartan/standard-version-config": "workspace:*",
-		"@codespatan/commitlint-config": "workspace:*",
-		"@codespartan/typescript-config": "workspace:*",
-		"typescript": "^5.6.2",
-		"vite": "^5.4.4",
-		"vite-plugin-string": "^1.2.3"
-	},
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "https://opensource.org/licenses/MIT"
-		}
-	],
+	"type": "module",
 	"exports": {
 		".": {
 			"import": "./dist/core.es.js",
@@ -48,5 +27,35 @@
 		"CHANGELOG.md",
 		"readme.md",
 		"LICENSE"
+	],
+	"scripts": {
+		"build": "tsc && vite build && rollup -c rollup.config.mjs",
+		"buildAndChangelog": "npm run build && npm run changelog",
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+		"sort": "npx sort-package-json",
+		"release": "standard-version --config @codespartan/standard-version-config/.versionrc",
+		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
+		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
+		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --prerelease"
+	},
+	"devDependencies": {
+		"@codespartan/eslint-config": "workspace:*",
+		"@codespartan/standard-version-config": "workspace:*",
+		"@codespartan/typescript-config": "workspace:*",
+		"@codespatan/commitlint-config": "workspace:*",
+		"@codespatan/prettier-config": "workspace:*",
+		"typescript": "^5.6.2",
+		"vite": "^5.4.4",
+		"vite-plugin-string": "^1.2.3"
+	},
+	"publishConfig": {
+		"registry": "http://localhost:4873"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://opensource.org/licenses/MIT"
+		}
 	]
 }

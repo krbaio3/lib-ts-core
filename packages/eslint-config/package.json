@@ -2,12 +2,16 @@
 	"name": "@codespartan/eslint-config",
 	"version": "0.1.0",
 	"description": "Configuracion para ESlint compartida para proyectos",
-	"main": "eslint.config.mjs",
-	"type": "module",
 	"keywords": [
 		"eslint",
 		"config"
 	],
+	"author": {
+		"name": "John Krbaio",
+		"email": "krbaio3@gmail.com"
+	},
+	"type": "module",
+	"main": "eslint.config.mjs",
 	"files": [
 		"eslint.config.mjs",
 		"CHANGELOG.md",
@@ -15,13 +19,22 @@
 		"package.json",
 		"readme.md"
 	],
-	"author": {
-		"name": "John Krbaio",
-		"email": "krbaio3@gmail.com"
-	},
 	"scripts": {
 		"buildAndChangelog": "npm run changelog",
-		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+		"sort": "npx sort-package-json",
+		"release": "standard-version --config @codespartan/standard-version-config/.versionrc",
+		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
+		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
+		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --prerelease"
+	},
+	"devDependencies": {
+		"@eslint/js": "9.10.0",
+		"@types/eslint__js": "8.42.3",
+		"eslint": "^9.10.0",
+		"typescript": "^5.6.2",
+		"typescript-eslint": "^8.6.0"
 	},
 	"peerDependencies": {
 		"@eslint/js": "^9.x.x",
@@ -43,17 +56,13 @@
 		"typescript-eslint": "^8.x.x",
 		"xo": "^0.x.x"
 	},
+	"publishConfig": {
+		"registry": "http://localhost:4873"
+	},
 	"licenses": [
 		{
 			"type": "MIT",
 			"url": "https://opensource.org/licenses/MIT"
 		}
-	],
-	"devDependencies": {
-		"@eslint/js": "9.10.0",
-		"@types/eslint__js": "8.42.3",
-		"eslint": "^9.10.0",
-		"typescript": "^5.6.2",
-		"typescript-eslint": "^8.6.0"
-	}
+	]
 }

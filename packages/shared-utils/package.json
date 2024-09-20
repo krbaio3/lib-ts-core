@@ -10,11 +10,18 @@
 	"author": {
 		"name": "John Krbaio",
 		"email": "krbaio3@gmail.com"
-	},
+	}, "publishConfig": {
+	"registry": "http://localhost:4873"
+},
 	"scripts": {
 		"build": "tsc && vite build && rollup -c rollup.config.mjs",
 		"buildAndChangelog": "npm run build && npm run changelog",
-		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+		"release": "standard-version --config @codespartan/standard-version-config/.versionrc",
+		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
+		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
+		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --prerelease"
 	},
 	"devDependencies": {
 		"@codespartan/eslint-config": "workspace:*",
