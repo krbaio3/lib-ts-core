@@ -1,0 +1,57 @@
+{
+	"name": "@codespartan/jest-config",
+	"version": "2.0.0",
+	"description": "Configuracion para Jest compartida para proyectos",
+	"keywords": [
+		"jest",
+		"config"
+	],
+	"author": {
+		"name": "John Krbaio",
+		"email": "krbaio3@gmail.com"
+	},
+	"type": "module",
+	"main": "jest.config.js",
+	"files": [
+		"jest.config.js",
+		"CHANGELOG.md",
+		"LICENSE",
+		"package.json",
+		"readme.md"
+	],
+	"scripts": {
+		"buildAndChangelog": "npm run changelog",
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+		"release": "standard-version --config @codespartan/standard-version-config/.versionrc",
+		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
+		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
+		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
+		"sort": "npx sort-package-json"
+	},
+	"devDependencies": {
+		"@codespartan/standard-version-config": "workspace:*"
+	},
+	"peerDependencies": {
+		"@types/jest": "^29.x.x",
+		"@types/node": "^22.x.x",
+		"jest": "^29.x.x",
+		"ts-jest": "^29.x.x",
+		"typescript": "^5.x.x"
+	},
+	"publishConfig": {
+		"registry": "http://localhost:4873"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://opensource.org/licenses/MIT"
+		}
+	],
+	"standard-version": {
+		"skip": {
+			"commit": true,
+			"tag": true
+		}
+	}
+}

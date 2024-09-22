@@ -5,7 +5,7 @@ import del from 'rollup-plugin-delete';
 export default {
 	input: path.resolve('temp/index.d.ts'), // Usa el archivo de entrada en el directorio temporal
 	output: {
-		file: path.resolve('dist/types/core.d.ts'), // Archivo de salida combinado en `dist/types`
+		file: path.resolve('dist/types/utils.d.ts'), // Archivo de salida combinado en `dist/types`
 		format: 'es',
 	},
 	plugins: [

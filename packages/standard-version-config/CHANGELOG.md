@@ -4,18 +4,39 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.0.0](https://github.com/krbaio3/lib-ts-core/compare/v1.0.0...v2.0.0) (2024-09-22)
 
-## [1.0.0](https://github.com/krbaio3/lib-ts-core/compare/v0.3.4...v1.0.0) (2024-09-20)
+## 0.1.0 (2024-09-20)
+
+* feat: new config with monorepo ([4fdeba5](https://github.com/krbaio3/lib-ts-core/commit/4fdeba5))
 
 
-### ⚠ BREAKING CHANGES
+### BREAKING CHANGE
 
 * Change all config and inport/export
-* Change all config and inport/export
 
-### Features
 
-* new config with monorepo ([e4cd60c](https://github.com/krbaio3/lib-ts-core/commit/e4cd60c6be30d107ecbdd555e87076c513ca0641))
-* new config with monorepo ([4fdeba5](https://github.com/krbaio3/lib-ts-core/commit/4fdeba5503d7e0b9fed2b50fdd7a8c24f0b07314))
+## <small>0.3.4 (2024-09-19)</small>
+
+* chore: fix eslint config ([5362c16](https://github.com/krbaio3/lib-ts-core/commit/5362c16))
+* chore(release): 0.3.4 ([f6f0311](https://github.com/krbaio3/lib-ts-core/commit/f6f0311))
+
+
+
+## <small>0.3.3 (2024-09-16)</small>
+
+* chore(release): 0.3.2 ([4b75ab1](https://github.com/krbaio3/lib-ts-core/commit/4b75ab1))
+* chore(release): 0.3.2 ([bed25f5](https://github.com/krbaio3/lib-ts-core/commit/bed25f5))
+* chore(release): 0.3.3 ([bc10d59](https://github.com/krbaio3/lib-ts-core/commit/bc10d59))
+* fix: export types filename ([f22c910](https://github.com/krbaio3/lib-ts-core/commit/f22c910))
+
+
+
+## <small>0.3.1 (2024-09-16)</small>
+
+* chore(release): 0.3.1 ([c2f93c0](https://github.com/krbaio3/lib-ts-core/commit/c2f93c0))
+* fix: export types ([8af7698](https://github.com/krbaio3/lib-ts-core/commit/8af7698))
+* fix: export types ([4ff5c0c](https://github.com/krbaio3/lib-ts-core/commit/4ff5c0c))
+
+
 
 ## 0.3.0 (2024-09-12)
 

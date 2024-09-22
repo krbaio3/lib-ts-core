@@ -1,0 +1,66 @@
+{
+	"name": "@codespartan/lib-ts-utils",
+	"version": "1.0.0",
+	"description": "Librería que contiene las utilidades básicas para proyectos de Typescript",
+	"type": "module",
+	"keywords": [
+		"typescript",
+		"utils"
+	],
+	"author": {
+		"name": "John Krbaio",
+		"email": "krbaio3@gmail.com"
+	},
+	"publishConfig": {
+		"registry": "http://localhost:4873"
+	},
+	"scripts": {
+		"build": "tsc && vite build && rollup -c rollup.config.mjs",
+		"buildAndChangelog": "npm run build && npm run changelog",
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+		"release": "standard-version --config @codespartan/standard-version-config/.versionrc",
+		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
+		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
+		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major"
+	},
+	"devDependencies": {
+		"@codespartan/eslint-config": "workspace:*",
+		"@codespatan/prettier-config": "workspace:*",
+		"@codespartan/standard-version-config": "workspace:*",
+		"@codespatan/commitlint-config": "workspace:*",
+		"@codespartan/typescript-config": "workspace:*",
+		"typescript": "^5.6.2",
+		"vite": "^5.4.4",
+		"vite-plugin-string": "^1.2.3"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://opensource.org/licenses/MIT"
+		}
+	],
+	"exports": {
+		".": {
+			"import": "./dist/utils.es.js",
+			"require": "./dist/utils.cjs.js",
+			"types": "./dist/types/utils.d.ts"
+		}
+	},
+	"main": "dist/utils.cjs.js",
+	"module": "dist/utils.es.js",
+	"types": "dist/types/utils.d.ts",
+	"files": [
+		"dist",
+		"package.json",
+		"CHANGELOG.md",
+		"readme.md",
+		"LICENSE"
+	],
+	"standard-version": {
+		"skip": {
+			"commit": true,
+			"tag": true
+		}
+	}
+}

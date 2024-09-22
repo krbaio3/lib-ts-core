@@ -1,74 +1,32 @@
-import eslintPluginUnicorn from 'eslint-plugin-unicorn';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import eslintConfigXO from 'eslint-config-xo';
-import eslintConfigXOTypescript from 'eslint-config-xo-typescript';
-import eslintConfigPrettier from 'eslint-config-prettier';
-import typescriptEslintParser from '@typescript-eslint/parser';
-import { fileURLToPath } from 'node:url';
+import { basicEslintConfig, basicEslintConfigJs, basicEslintConfigTs } from '@codespartan/eslint-config';
 import path from 'node:path';
-import globals from 'globals';
-import pluginJs from '@eslint/js';
-import tsEslint from 'typescript-eslint';
+import { fileURLToPath } from 'node:url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const dir = path.dirname(fileURLToPath(import.meta.url));
+
+const configTs = basicEslintConfigTs(dir);
+
+// Al ser monorepo, no existe una carpeta src, por lo que se debe cambiar a packages
+configTs[0].files = ['packages/**/*.ts'];
 
 export default [
-	pluginJs.configs.recommended,
-	...tsEslint.configs.recommended,
+	...basicEslintConfig,
+	...basicEslintConfigJs,
+	...configTs,
 	{
-		files: ['src/**/*.ts', 'src/**/*.tsx'],
-		languageOptions: {
-			parser: typescriptEslintParser,
-			ecmaVersion: 'latest',
-			parserOptions: {
-				project: './tsconfig.json',
-				tsconfigRootDir: __dirname,
-				sourceType: 'module',
-			},
-			globals: globals.browser,
-		},
-		plugins: {
-			unicorn: eslintPluginUnicorn,
-			prettier: eslintPluginPrettierRecommended,
-		},
-		rules: {
-			...eslintConfigXO.rules,
-			...eslintConfigXOTypescript.rules,
-			...eslintPluginUnicorn.configs['flat/all'].rules,
-			...eslintConfigPrettier.rules,
-			'@typescript-eslint/no-unsafe-call': 'off',
-			'@typescript-eslint/no-unsafe-assignment': 'off',
-			'@typescript-eslint/no-unsafe-argument': 'off',
-			'@typescript-eslint/no-unsafe-return': 'off',
-			'@typescript-eslint/no-explicit-any': 'off',
-			'new-cap': 'off',
-			'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-			'@typescript-eslint/parameter-properties': [
-				'error',
-				{
-					allow: ['readonly'],
-				},
-			],
-		},
+		ignores: [
+			'**/*.config.js',
+			'**/*.config.mjs',
+			'settings/**/*.mjs',
+			'packages/shared-utils/**/*.ts',
+			'packages/shared-core/**/*.ts',
+			'packages/standard-version-config/**/*.js',
+			'**/build/**',
+			'**/dist/**',
+			'**/node_modules/**',
+			'*.mjs',
+			'*.cjs',
+			'.prettierrc.js',
+		],
 	},
-	{
-		files: ['**/*.js'],
-		// ignores: ['*.config.{cjs | mjs}'],
-		languageOptions: {
-			parserOptions: {
-				ecmaVersion: 'latest',
-				sourceType: 'module',
-			},
-		},
-		plugins: {
-			unicorn: eslintPluginUnicorn,
-			prettier: eslintPluginPrettierRecommended,
-		},
-		rules: {
-			...eslintConfigXO.rules,
-			...eslintPluginUnicorn.configs['flat/all'].rules,
-			...eslintConfigPrettier.rules,
-		},
-	},
-	{ ignores: ['**/build/**', '**/dist/**', 'node_modules/**', '*.mjs', '*.cjs'] },
 ];

@@ -38,10 +38,10 @@ function pushChanges(nextVersion) {
 	execSync(`git push origin v${nextVersion}`);
 }
 
-function main() {
+export function main() {
 	const releaseType = process.argv[2];
 	if (!releaseType) {
-		handleError('Usage: node release.js [major|minor|patch|prerelease]');
+		handleError('Usage: node release.mjs [major|minor|patch|prerelease]');
 	}
 
 	const nextVersion = getNextVersion(currentVersion, releaseType);
@@ -55,5 +55,3 @@ function main() {
 
 	console.log(`Released version ${nextVersion}`);
 }
-
-main();

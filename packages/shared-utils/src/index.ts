@@ -1,4 +1,3 @@
-export * from '../configs/storage-manager.core';
 export * from './replace-spaces.utils';
 export * from './find-key-in-object.utils';
 export * from './kebab-to-snakecase.utils';

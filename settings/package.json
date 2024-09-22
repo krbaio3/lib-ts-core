@@ -1,0 +1,64 @@
+{
+	"name": "@codespartan/settings-config",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Librería que contiene las configuraciones básicas para proyectos de Typescript",
+	"keywords": [],
+	"license": "ISC",
+	"author": {
+		"name": "Jorge Carballo",
+		"email": "jcarballo@bankinter.com"
+	},
+	"type": "module",
+	"files": [
+		"package.json",
+		"release.mjs",
+		"lintstaged.mjs",
+		"conventional-changelog.mjs",
+		"CHANGELOG.md",
+		"readme.md",
+		".husky/"
+	],
+	"scripts": {
+		"buildAndChangelog": "npm run changelog",
+		"changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+		"sort": "npx sort-package-json",
+		"release": "standard-version --config @codespartan/standard-version-config/.versionrc",
+		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
+		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
+		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major"
+	},
+	"peerDependencies": {
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
+		"@commitlint/prompt-cli": "^19.5.0",
+		"commitizen": "^4.3.0",
+		"conventional-changelog-cli": "^5.0.0",
+		"husky": "^9.1.6",
+		"lint-staged": "^15.2.10"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
+		"@commitlint/prompt-cli": "^19.5.0",
+		"commitizen": "^4.3.0",
+		"conventional-changelog-cli": "^5.0.0",
+		"husky": "^9.1.6",
+		"lint-staged": "^15.2.10"
+	},
+	"publishConfig": {
+		"registry": "http://localhost:4873"
+	},
+	"standard-version": {
+		"skip": {
+			"commit": true,
+			"tag": true
+		}
+	},
+	"engines": {
+		"node": ">=18.0.0",
+		"npm": ">=9.0.0",
+		"yarn": ">=1.2.0"
+	}
+}
