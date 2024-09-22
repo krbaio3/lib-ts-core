@@ -1,6 +1,6 @@
 {
 	"name": "@codespartan/lib-ts-utils",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "Librería que contiene las utilidades básicas para proyectos de Typescript",
 	"type": "module",
 	"keywords": [
@@ -10,9 +10,10 @@
 	"author": {
 		"name": "John Krbaio",
 		"email": "krbaio3@gmail.com"
-	}, "publishConfig": {
-	"registry": "http://localhost:4873"
-},
+	},
+	"publishConfig": {
+		"registry": "http://localhost:4873"
+	},
 	"scripts": {
 		"build": "tsc && vite build && rollup -c rollup.config.mjs",
 		"buildAndChangelog": "npm run build && npm run changelog",

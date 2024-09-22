@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/krbaio3/lib-ts-core/compare/v1.0.0...v2.0.0) (2024-09-22)
+
 ## [1.0.0](https://github.com/krbaio3/lib-ts-core/compare/v0.3.4...v1.0.0) (2024-09-20)
 
 

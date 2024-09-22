@@ -4,17 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.0.0](https://github.com/krbaio3/lib-ts-core/compare/v1.0.0...v2.0.0) (2024-09-22)
 
-
-### Chores
-
-* **release:** 1.0.0 ([8010925](https://github.com/krbaio3/lib-ts-core/commit/80109258a6f94dec0d0372477e78d7ee4704c280))
-* **release:** 1.0.0 ([7dc0392](https://github.com/krbaio3/lib-ts-core/commit/7dc0392b015135702a1920e0ef62cf14a90ae68b))
-* **release:** 1.0.0 ([d745584](https://github.com/krbaio3/lib-ts-core/commit/d745584014400fd035b2a5380a37adacf35829d5))
-* **release:** 1.0.0 ([25b433e](https://github.com/krbaio3/lib-ts-core/commit/25b433e9b607ff4bcc633f4963e20b411b264cde))
-* **release:** 2.0.0 ([4500e8c](https://github.com/krbaio3/lib-ts-core/commit/4500e8cbb33ff776e427086939b4463517751d35))
-* **release:** 2.0.0 ([6947c7d](https://github.com/krbaio3/lib-ts-core/commit/6947c7d2a1ff10a9ac587052ab7cf73de839c370))
-* **release:** 3.0.0 ([10e774d](https://github.com/krbaio3/lib-ts-core/commit/10e774d4b62e09bd726315885839ac1a15b32ffb))
-
 ## 0.1.0 (2024-09-20)
 
 * feat: new config with monorepo ([4fdeba5](https://github.com/krbaio3/lib-ts-core/commit/4fdeba5))

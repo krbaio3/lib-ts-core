@@ -1,6 +1,6 @@
 {
 	"name": "@codespartan/settings-config",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"private": true,
 	"description": "Librería que contiene las configuraciones básicas para proyectos de Typescript",
 	"keywords": [],

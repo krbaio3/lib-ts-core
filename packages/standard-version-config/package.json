@@ -1,6 +1,6 @@
 {
 	"name": "@codespartan/standard-version-config",
-	"version": "0.5.0",
+	"version": "1.0.0",
 	"description": "Configuracion para StandardVersion compartida para proyectos",
 	"keywords": [
 		"standard-version",

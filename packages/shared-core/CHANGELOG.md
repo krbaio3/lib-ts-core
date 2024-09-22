@@ -1,3 +1,7 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## 0.1.0 (2024-09-20)
 
 * feat: new config with monorepo ([4fdeba5](https://github.com/krbaio3/lib-ts-core/commit/4fdeba5))
@@ -64,6 +68,3 @@
 * feat: add standard version dependencie ([898f749](https://github.com/krbaio3/lib-ts-core/commit/898f749))
 * Initial commit ([c226cd3](https://github.com/krbaio3/lib-ts-core/commit/c226cd3))
 * Initial commit ([de58078](https://github.com/krbaio3/lib-ts-core/commit/de58078))
-
-
-
