@@ -1,6 +1,6 @@
 {
 	"name": "@codespartan/jest-config",
-	"version": "0.2.0-0",
+	"version": "2.0.0",
 	"description": "Configuracion para Jest compartida para proyectos",
 	"keywords": [
 		"jest",
@@ -27,7 +27,10 @@
 		"release:major": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major",
 		"release:minor": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as minor",
 		"release:patch": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as patch",
-		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --prerelease"
+		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major"
+	},
+	"devDependencies": {
+		"@codespartan/standard-version-config": "workspace:*"
 	},
 	"peerDependencies": {
 		"@types/jest": "^29.x.x",
@@ -44,5 +47,10 @@
 			"type": "MIT",
 			"url": "https://opensource.org/licenses/MIT"
 		}
-	]
+	],
+	"standard-version": {
+		"skip": {
+			"commit": true
+		}
+	}
 }

@@ -1,6 +1,6 @@
 {
 	"name": "@codespartan/eslint-config",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Configuracion para ESlint compartida para proyectos",
 	"keywords": [
 		"eslint",
@@ -30,6 +30,7 @@
 		"release:prerelease": "standard-version --config @codespartan/standard-version-config/.versionrc --release-as major"
 	},
 	"devDependencies": {
+		"@codespartan/standard-version-config": "workspace:*",
 		"@eslint/js": "9.10.0",
 		"@types/eslint__js": "8.42.3",
 		"eslint": "^9.10.0",
@@ -64,5 +65,10 @@
 			"type": "MIT",
 			"url": "https://opensource.org/licenses/MIT"
 		}
-	]
+	],
+	"standard-version": {
+		"skip": {
+			"commit": true
+		}
+	}
 }
